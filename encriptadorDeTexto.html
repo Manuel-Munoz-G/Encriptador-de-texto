@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de Texto</title>
+    <link rel="stylesheet" href="encriptadorDeTexto.css">
+    <link rel="icon" href="logo.ico" type="x-icon">
+</head>
+<body>
+    <div class="cuerpo">
+        
+        <!-- Primera columna: Logo -->
+        <div class="columna columna-logo">
+            <img class="logo" src="Logo.png" alt="Logo Alura LATAM" id="logo">
+        </div>
+        
+        <!-- Segunda columna: Entrada de texto y botones -->
+        <div class="columna columna-entrada">
+            <!-- Área de texto para la entrada -->
+            <div class="textareaDeEntrada">
+                <textarea class="textareaEntrada" id="texto" placeholder="Ingrese su texto aquí..."></textarea>
+            </div>
+            
+            <!-- Advertencia sobre el formato del texto -->
+            <div class="advertencia">
+                <p><i class="fas fa-info-circle"></i> Solo letras minúsculas y sin acentos.</p>
+            </div>
+            
+            <!-- Botones de encriptar y desencriptar -->
+            <div class="botones">
+                <button class="botonEncriptar" onclick="encriptar()">Encriptar</button>
+                <button class="botonDesencriptar" onclick="desencriptar()">Desencriptar</button>
+            </div>
+        </div>
+        
+        <!-- Tercera columna: Resultado -->
+        <div class="columna columna-salida">
+            <div class="bloque" id="resultado-bloque">
+                <!-- Imagen inicial -->
+                <img class="imagenSalida" src="Muñeco.png" alt="Imagen" id="imagen">
+                <!-- Párrafo para mostrar el resultado -->
+                <p id="resultado" class="parrafoResultado" style="display: none;"></p>
+                <!-- Textarea oculta para copiar el resultado -->
+                <textarea id="resultado-textarea" style="display: none;"></textarea>
+            </div>
+            
+            <!-- Botón para copiar el resultado -->
+            <div id="boton-copiar" style="display: none;">
+                <button class="botonCopiar" onclick="copiarTexto()">Copiar</button>
+            </div>
+            
+            <!-- Mensaje cuando no hay resultados -->
+            <div class="mensaje" id="mensaje">
+                <h2 class="h2salida">Ningún mensaje fue encontrado</h2>
+                <p class="psalida">Ingresa el texto que desees encriptar o desencriptar</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Enlace al archivo JavaScript -->
+    <script src="encriptadorDeTexto.js"></script>
+</body>
+
+<footer>
+    <p>Desarrollado por L8 PRODUCCIONES.</p>
+</footer>
+
+</html>
